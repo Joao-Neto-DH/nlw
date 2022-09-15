@@ -1,4 +1,5 @@
 import BannerText from "./components/BannerText";
+import GameGroup from "./components/GameGroup";
 import Logo from "./components/Logo";
 import "./styles/main.css";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="max-w-[1344px] mx-auto flex flex-col items-center">
       <Logo/>
       <BannerText/>
+      <GameGroup/>
     </div>
   )
 }
