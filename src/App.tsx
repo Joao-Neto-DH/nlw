@@ -5,7 +5,7 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <div className="max-w-[1344px] mx-auto flex flex-col items-center">
+    <div className="max-w-[1020px] mx-auto flex flex-col items-center">
       <Logo/>
       <BannerText/>
       <GameGroup/>
