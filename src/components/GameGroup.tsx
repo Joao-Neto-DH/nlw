@@ -1,48 +1,49 @@
+import GameCard from "./GameCard";
+import { GameProps } from "./GameCard";
+
+const gameProps: GameProps[] = [
+    {
+        title: "League of Legend",
+        img: "/game-1.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    },
+    {
+        title: "Dota 2",
+        img: "/game-2.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    },
+    {
+        title: "Counter Strike",
+        img: "/game-3.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    },
+    {
+        title: "Apex Legends",
+        img: "/game-4.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    },
+    {
+        title: "Fortnite",
+        img: "/game-5.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    },
+    {
+        title: "Word of Warcraft",
+        img: "/game-6.png",
+        ads: parseInt((Math.random() * 10).toString()),
+    }
+];
+
 function GameGroup() {
+
+
+    const games = gameProps.map((game)=>{
+        return <GameCard {...game}/>
+    });
+
     return ( 
         <div className="grid grid-cols-6 gap-6 my-16">
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-1.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-2.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-3.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-4.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-5.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
-            <a href="#" className="relative rounded-lg overflow-hidden">
-                <img src="/game-6.png" alt="Game 1" />
-                <div className="absolute bottom-0 left-0 right-0 max-w-full max-h-32 p-4 bg-game-gradient text-white">
-                    <strong className="text-base font-bold block">League of Legends</strong>
-                    <span className="font-thin text-sm text-zinc-300 block">4 anúncios</span>
-                </div>
-            </a>
+            { games }
         </div>
      );
 }
