@@ -4,32 +4,32 @@ import { GameProps } from "./GameCard";
 const gameProps: GameProps[] = [
     {
         title: "League of Legend",
-        img: "/game-1.png",
+        cover: "/game-1.png",
         ads: parseInt((Math.random() * 10).toString()),
     },
     {
         title: "Dota 2",
-        img: "/game-2.png",
+        cover: "/game-2.png",
         ads: parseInt((Math.random() * 10).toString()),
     },
     {
         title: "Counter Strike",
-        img: "/game-3.png",
+        cover: "/game-3.png",
         ads: parseInt((Math.random() * 10).toString()),
     },
     {
         title: "Apex Legends",
-        img: "/game-4.png",
+        cover: "/game-4.png",
         ads: parseInt((Math.random() * 10).toString()),
     },
     {
         title: "Fortnite",
-        img: "/game-5.png",
+        cover: "/game-5.png",
         ads: parseInt((Math.random() * 10).toString()),
     },
     {
         title: "Word of Warcraft",
-        img: "/game-6.png",
+        cover: "/game-6.png",
         ads: parseInt((Math.random() * 10).toString()),
     }
 ];
@@ -37,8 +37,8 @@ const gameProps: GameProps[] = [
 function GameGroup() {
 
 
-    const games = gameProps.map((game)=>{
-        return <GameCard {...game}/>
+    const games = gameProps.map((game, index)=>{
+        return <GameCard {...game} key={index}/>
     });
 
     return ( 
